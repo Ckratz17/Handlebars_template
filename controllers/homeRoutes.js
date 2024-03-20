@@ -1,10 +1,10 @@
 const router = require('express').Router()
 const User = require('../models/User')
 
+
+// Route to render the home page
 router.get('/', async (req, res) => {
     try {
-        const userData =  await User.findAll()
-      
         res.render('home')
         
     } catch (err) {
@@ -12,6 +12,20 @@ router.get('/', async (req, res) => {
     }
 })
 
+// Route to get the users----TEST ROUTE ONLY DELETE BEFORE DEPLOY----------
+router.get('/users', async (req, res) => {
+    try {
+        const userData =  await User.findAll()
+      
+        res.status(200).json(userData)
+        
+    } catch (err) {
+        res.status(500).json
+    }
+})
+
+
+// Route to render the login page
 router.get('/login', async (req, res) => {
     try {
         if(req.session.logged_in) {
@@ -24,6 +38,8 @@ router.get('/login', async (req, res) => {
     }
 })
 
+
+// Route to render the signup page
 router.get('/signup', async (req, res) => {
     try {
         if(req.session.logged_in) {
