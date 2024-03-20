@@ -1,6 +1,6 @@
 const {Model, DataTypes } = require('sequelize')
 const bcrypt = require('bcrypt')
-const sequelize = require('sequelize')
+const sequelize = require('../config/connection')
 
 class User extends Model {
     checkPassword(loginPw) {
@@ -16,9 +16,17 @@ User.init(
             primaryKey: true,
             autoIncrement: true
         },
-        username: {
+        name: {
             type: DataTypes.STRING,
             allowNull: false
+        },
+        email: {
+            type: DataTypes.STRING,
+            unique: true,
+            allowNull: false,
+            validate: {
+                isEmail: true
+            }
         },
         password: {
             type: DataTypes.STRING,
@@ -46,3 +54,5 @@ User.init(
         modelName: 'User'
     }
 )
+
+module.exports = User
