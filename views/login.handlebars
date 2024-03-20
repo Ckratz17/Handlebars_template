@@ -1,41 +1,37 @@
 <div>
-     <section>
+  <section>
 
-   <div class="signin"> 
+    <div class="signin">
 
-    <div class="content"> 
+      <div class="content">
 
-     <h2>Log In</h2> 
+        <h2>Log In</h2>
 
-     <div class="form"> 
+        <form class="form" id="login-form">
 
-      <div class="inputBox"> 
+          <div class="inputBox">
 
-       <input type="text" required> <i>Email</i> 
+            <input id="login-email" type="text" required> <i>Email</i>
 
-      </div> 
+          </div>
 
-      <div class="inputBox"> 
+          <div class="inputBox">
 
-       <input type="password" required> <i>Password</i> 
+            <input id="login-password" type="password" required> <i>Password</i>
 
-      </div> 
+          </div>
 
-      <div class="links"> <a href="/signup">Sign Up</a> 
+          <button id="login-btn" type="submit" class="btn">Log In</button>
 
-      </div> 
+          <a href="/signup">Sign Up Instead</a>
 
-      <div class="inputBox"> 
+        </form>
 
-       <input type="submit" value="Login"> 
+      </div>
 
-      </div> 
+    </div>
 
-     </div> 
-
-    </div> 
-
-   </div> 
-
-  </section> <!-- partial --> 
+  </section> <!-- partial -->
 </div>
+
+<script src="js/login.js"></script>
