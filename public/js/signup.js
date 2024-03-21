@@ -18,9 +18,6 @@ const handleSignupSubmit = async (e) => {
             alert('Failed to create account')
         }
     }
-
-   
-
 }
 
 
