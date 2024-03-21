@@ -8,16 +8,16 @@
     <link rel="stylesheet" href="/css/custom.css">
 </head>
 <body>
-    <header class="display-flex justify-space-between align-center p-2">
+    <header class="display-flex justify-space-between align-center p-2 main-header">
         <h1>
-            <a href="/">App Title</a>
+            <a class="main-title" href="/">App Title</a>
         </h1>
         <nav>
             {{#if logged_in}}
-            <button class="btn" id="logout">Logout</button>
+            <a class="logout-btn main-links" type="button" id="logout">Logout</a>
             {{else}}
-            <a href="/login">Login</a>
-            <a href="/signup">Sign Up</a>
+            <a class="main-links" href="/login">Login</a>
+            <a class="main-links" href="/signup">Sign Up</a>
             {{/if}}
         </nav>
     </header>
@@ -28,3 +28,5 @@
 
 </body>
 </html>
+
+<script src="/js/logout.js"></script>

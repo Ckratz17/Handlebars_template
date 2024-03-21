@@ -5,12 +5,15 @@
   box-sizing: border-box;
   font-family: 'Quicksand', sans-serif;
 }
+/* STYLES FOR BODY INCLUDING BACKGROUND COLOR */
 body 
 {
   overflow-x: hidden;
   min-height: 100vh;
   background: linear-gradient(#000, #0f0, #000);
 } 
+
+/* STYLES FOR THE LOGIN AND SIGNUP FORMS */
 section 
 {
   position: absolute;
@@ -132,6 +135,37 @@ input[type="submit"]:active
 {
   opacity: 0.6;
 }
+
+/* ------------------------------------ */
+/* HEADER STYLES FOR THE MAIN HANDLEBAR LAYOUT */
+.main-header {
+  background: linear-gradient(180deg, black, transparent);
+}
+
+.main-title {
+  color: rgba(49, 238, 49, 0.674);
+  font-size: xx-large;
+  border: 4px solid black;
+  box-shadow: 7px 8px 15px 2px #91ee91;
+}
+
+.main-links {
+  padding: 0px 25px;
+  color: rgba(49, 238, 49, 0.674);
+  font-size: 20px;
+}
+
+.main-links:hover, .main-title:hover {
+  color: rgb(6, 98, 6) !important;
+}
+
+.logout-btn {
+  border: none;
+}
+
+
+/* ------------------------------------------*/
+/* MEDIA QUERIES FOR LOGIN AND SIGN UP FORMS */
 @media (max-width: 900px)
 {
   section span 
@@ -148,3 +182,4 @@ input[type="submit"]:active
     height: calc(20vw - 2px);
   }
 }
+
